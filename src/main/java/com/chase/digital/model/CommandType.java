@@ -1,29 +1,28 @@
 package com.chase.digital.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * TODO - Class definition
  *
  * @author Nate Vardell
- * @since 3/28/2018
+ * @since 4/8/2018
  */
 @Entity
-public class Application {
+public class CommandType {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-    public Application() {
+    public CommandType() {
     }
 
-    public Application(String name) {
-        this.name = name;
-    }
-
-    public Application(Long id, String name) {
+    public CommandType(Long id, String name) {
         this.id = id;
         this.name = name;
     }
