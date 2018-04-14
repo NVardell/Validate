@@ -1,6 +1,6 @@
 package com.chase.digital.repo;
 
-import com.chase.digital.model.Application;
+import com.chase.digital.model.Request;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +21,14 @@ import java.util.List;
  */
 @DataJpaTest
 @RunWith(SpringRunner.class)
-public class ApplicationRepoTest {
+public class RequestRepoTest {
 
     @Autowired
-    private ApplicationRepo appRepo;
+    private RequestRepo requestRepo;
 
     @Test
     public void testFindAll() {
-        List<Application> apps = appRepo.findAll();
-        assertThat(apps.size(), is(greaterThanOrEqualTo(0)));
+        List<Request> requests = requestRepo.findAll();
+        assertThat(requests.size(), is(greaterThanOrEqualTo(0)));
     }
 }
