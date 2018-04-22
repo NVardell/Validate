@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chase | Validation Tool</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="img/png" href="https://www.chase.com/etc/designs/chase-ux/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/credentialsDialog.css">
+    <link rel="stylesheet" href="css/inputs.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body ng-app="validationApp" layout-fill>
+    <div class="nav">
+         <ng-include src="'views/menu.html'"/></ng-include>
+    </div>
+    <div>
+        <div id="view" ng-view></div>
+    </div>
+
+    <div class="credentialsDialog" ng-controller="dialogCtrl as dCtrl">
+        <ng-include src="'views/dialogs/credentials.html'" onload="dCtrl.init()"></ng-include>
+    </div>
+    
+</body>
+<!-- jQuery Dependency -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- AngularJS Dependencies -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-aria.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-messages.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-resource.min.js"></script>
+<!-- AngularJS Materials Dependency -->
+<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.js"></script>
+<!-- Application Angular Script -->
+<script src="js/app.js"></script>
+<!-- Controllers Scripts -->
+<script src="js/controllers/homeController.js"></script>
+<script src="js/controllers/menuController.js"></script>
+<script src="js/controllers/dialogs/credentialsDialogController.js"></script>
+<!-- Services Scripts -->
+<script src="js/services/credentialsService.js"></script>
+<script src="js/services/historyService.js"></script>
+<script src="js/services/inputService.js"></script>
+<script src="js/services/resultsService.js"></script>
+<!-- Directive Scripts -->
+<script src="js/directives/credentialsDialogDirective.js"></script>
+<!-- Additional JavaScript Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</html>

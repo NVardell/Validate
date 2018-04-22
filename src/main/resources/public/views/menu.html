@@ -1,0 +1,10 @@
+<div ng-controller="menuCtrl as mCtrl">
+    <nav id="navbar" class="navbar">
+        <ul class="nav-menu">
+            <li ng-repeat="option in mCtrl.navOptions" ng-click="mCtrl.select($index)">
+                <a href="{{option}}" class="dot"
+                   ng-class="{active: $index===mCtrl.selectedIndex}"><span>{{option}}</span></a>
+            </li>
+        </ul>
+    </nav>
+</div>
