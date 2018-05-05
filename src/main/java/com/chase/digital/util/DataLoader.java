@@ -34,11 +34,11 @@ public class DataLoader implements ApplicationListener<ContextRefreshedEvent> {
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
 
         Set apps = new HashSet<Application>(){{
-            add(new Application("GWS"));
-            add(new Application("GWMOL"));
-            add(new Application("GWMOB"));
-            add(new Application("GWCSR"));
-            add(new Application("GWSUTIL"));
+            add(new Application("APP_1"));
+            add(new Application("APP_2"));
+            add(new Application("APP_3"));
+            add(new Application("APP_4"));
+            add(new Application("APP_5"));
         }};
 //        applicationRepo.sa
 
