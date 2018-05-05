@@ -1,1 +1,1 @@
-INSERT INTO Application VALUES (default, 'GWS');
+INSERT INTO Application VALUES (default, 'APP_1');
