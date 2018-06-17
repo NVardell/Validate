@@ -1,9 +1,9 @@
-package com.chase.digital.repo;
+package com.digital.repo;
 
-import com.chase.digital.model.App;
-import com.chase.digital.model.Query;
-import com.chase.digital.model.Region;
-import com.chase.digital.model.Type;
+import com.digital.model.App;
+import com.digital.model.Query;
+import com.digital.model.Region;
+import com.digital.model.Type;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

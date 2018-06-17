@@ -1,4 +1,4 @@
-package com.chase.digital.model;
+package com.digital.model;
 
 /**
  * TODO - Class definition

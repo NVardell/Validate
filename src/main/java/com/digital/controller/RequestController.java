@@ -1,7 +1,7 @@
-package com.chase.digital.controller;
+package com.digital.controller;
 
-import com.chase.digital.model.Request;
-import com.chase.digital.repo.RequestRepo;
+import com.digital.model.Request;
+import com.digital.repo.RequestRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

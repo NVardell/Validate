@@ -1,10 +1,7 @@
-package com.chase.digital.repo;
+package com.digital.repo;
 
-import com.chase.digital.model.App;
-import com.chase.digital.model.Request;
+import com.digital.model.Request;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
 
 /**
  * TODO - Class definition

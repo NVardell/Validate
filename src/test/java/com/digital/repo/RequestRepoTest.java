@@ -1,6 +1,6 @@
-package com.chase.digital.repo;
+package com.digital.repo;
 
-import com.chase.digital.model.Request;
+import com.digital.model.Request;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.chase.digital.model;
+package com.digital.model;
 
 /**
  * TODO - Class definition
@@ -6,10 +6,10 @@ package com.chase.digital.model;
  * @author Nate Vardell
  * @since 4/8/2018
  */
-public enum App {
+public enum Type {
 
-    APP1,
-    APP2,
-    APP3
+    TYPE1,
+    TYPE2,
+    TYPE3
 
 }

@@ -1,4 +1,4 @@
-package com.chase.digital.model;
+package com.digital.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
