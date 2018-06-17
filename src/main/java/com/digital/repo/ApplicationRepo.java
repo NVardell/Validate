@@ -1,6 +1,6 @@
-package com.chase.digital.repo;
+package com.digital.repo;
 
-import com.chase.digital.model.Application;
+import com.digital.model.Application;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
