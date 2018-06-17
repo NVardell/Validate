@@ -1,7 +1,7 @@
-package com.chase.digital.util;
+package com.digital.util;
 
-import com.chase.digital.model.Application;
-import com.chase.digital.repo.ApplicationRepo;
+import com.digital.model.Application;
+import com.digital.repo.ApplicationRepo;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;

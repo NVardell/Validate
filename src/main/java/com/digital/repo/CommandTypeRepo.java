@@ -1,4 +1,4 @@
-package com.chase.digital.repo;
+package com.digital.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package com.chase.digital.repo;
+package com.digital.repo;
 
 /**
  * TODO - Class definition
@@ -6,5 +6,5 @@ package com.chase.digital.repo;
  * @author Nate Vardell
  * @since 4/8/2018
  */
-public interface QueryRepo {
+public interface RequestRepo {
 }

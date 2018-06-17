@@ -1,4 +1,4 @@
-package com.chase.digital.model;
+package com.digital.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.chase.digital.controller;
+package com.digital.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
