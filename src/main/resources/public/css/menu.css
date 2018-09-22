@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+.navbar {
+    font-family: 'Indie Flower', sans-serif;
+    position: fixed;
+    top: 20%;
+    left: 50px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.navbar .nav-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar .nav-menu li {
+    position: relative;
+    min-width: 200px;
+    text-align: left;
+}
+
+.navbar .nav-menu li .dot {
+    display: block;
+    color: #fff;
+    padding: 5px 0;
+}
+
+.navbar .nav-menu li .dot::before,
+.navbar .nav-menu li .dot::after {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    top: 50%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.navbar .nav-menu li .dot::before {
+    width: 5px;
+    height: 5px;
+    border: 2.5px solid #f44336;
+    opacity: 0.6;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.navbar .nav-menu li .dot::after {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #f44336;
+    left: -5px;
+    -webkit-transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) scale(0);
+}
+
+.navbar .nav-menu li .dot.active::before,
+.navbar .nav-menu li:hover .dot::before {
+    background: #f44336;
+    border-color: #f44336;
+}
+
+.navbar .nav-menu li .dot.active::after,
+.navbar .nav-menu li:hover .dot::after {
+    -webkit-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+}
+
+.navbar .nav-menu li .dot span {
+    display: inline-block;
+    opacity: 0;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    background-color: #f44336;
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin-left: 30px;
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.navbar .nav-menu li .dot span::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-right: 7px solid #f44336;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    top: 50%;
+    -webkit-transform: translate(7px, -50%);
+    transform: translate(7px, -50%);
+    left: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.navbar .nav-menu li .dot.active span,
+.navbar .nav-menu li:hover .dot span {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1;
+}

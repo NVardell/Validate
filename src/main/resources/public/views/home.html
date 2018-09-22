@@ -1,0 +1,92 @@
+<!-- PANEL | Create Query -->
+<div layout="column" ng-cloak="" class="md-inline-form">
+    <md-card>
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools">
+                <span>Create Query</span>
+            </div>
+        </md-toolbar>
+        <md-divider></md-divider>
+        <md-card-content>
+            <form name="hCtrl.queryForm" ng-submit="hCtrl.addQuery()" novalidate>
+                <div layout="row" layout-wrap>
+                    <md-input-container class="md-block" flex>
+                        <label>Region</label>
+                        <md-select required ng-model="hCtrl.region">
+                            <md-option ng-repeat="region in hCtrl.regions" value="{{region.name}}">
+                                {{region.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex>
+                        <label>App</label>
+                        <md-select required ng-model="hCtrl.app">
+                            <md-option ng-repeat="app in hCtrl.apps" value="{{app.name}}">
+                                {{app.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex>
+                        <label>Type</label>
+                        <md-select required ng-model="hCtrl.type">
+                            <md-option ng-repeat="type in hCtrl.types" value="{{type.name}}">
+                                {{type.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="30">
+                        <label>Property</label>
+                        <input type="text" ng-model="hCtrl.property" required>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="30">
+                        <label>Expected Value</label>
+                        <input type="text" ng-model="hCtrl.expectedValue" required>
+                    </md-input-container>
+                </div>
+                <div layout="column" layout-wrap layout-align="center center">
+                    <button type="submit" class="btn btn-primary btn-block" ng-disabled="hCtrl.sectionForm.$invalid">Add Query</button>
+                </div>
+            </form>
+        </md-card-content>
+    </md-card>
+</div>
+
+<!-- PANEL | Current Queries -->
+<div layout="column" ng-cloak="" class="md-inline-form" ng-if="hCtrl.tableQueries.length != 0" style="">
+    <md-card >
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools">
+                <span flex>Current Queries</span>
+                <show-credentials-dialog-button ng-click="hCtrl.generateRequest()"></show-credentials-dialog-button>
+            </div>
+        </md-toolbar>
+        <md-divider></md-divider>
+        <md-card-content flex layout="row" style="max-height: 400px; overflow: auto;">
+            <table class="ui celled table" cellspacing="0" width="100%" >
+                <thead>
+                    <tr style="border-width: 0px;">
+                        <th>Region</th>
+                        <th>App</th>
+                        <th>Type</th>
+                        <th>Property</th>
+                        <th>Expecting</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div>
+                        <tr ng-repeat="query in hCtrl.tableQueries track by $index">
+                            <td>{{query.region}}</td>
+                            <td>{{query.app}}</td>
+                            <td>{{query.type}}</td>
+                            <td>{{query.prop}}</td>
+                            <td>{{query.exp}}</td>
+                            <td><md-icon ng-click="hCtrl.copyQuery(query)"> content_copy </md-icon></td>
+                            <td><md-icon ng-click="hCtrl.deleteQuery($index)"> delete </md-icon></td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+        </md-card-content>
+    </md-card>
+</div>

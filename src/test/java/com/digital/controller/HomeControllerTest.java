@@ -56,4 +56,5 @@ public class HomeControllerTest {
     public void testHealthMapping2() throws Exception {
         this.mockMvc.perform(get("/health")).andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString("UP")));
     }
+
 }
