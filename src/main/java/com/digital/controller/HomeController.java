@@ -21,4 +21,5 @@ public class HomeController {
     public String health() {
         return "HC Health Mapping";
     }
+
 }
