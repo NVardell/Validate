@@ -1,7 +1,7 @@
 package com.digital.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * TODO - Class definition
@@ -9,8 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Nate Vardell
  * @since 3/28/2018
  */
-@RestController
+@Controller
 public class HomeController {
+
+    @RequestMapping(value="/")
+    public String routeToHome(){
+        return "forward:index.html";
+    }
 
     @RequestMapping("/health")
     public String health() {

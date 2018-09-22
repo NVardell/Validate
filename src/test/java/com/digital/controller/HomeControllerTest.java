@@ -44,7 +44,7 @@ public class HomeControllerTest {
      */
     @Test
     public void testHealthMapping() throws Exception {
-        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/health", String.class)).contains("HC Health Mapping");
+        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/health", String.class)).contains("UP");
     }
 
     /**
@@ -54,6 +54,6 @@ public class HomeControllerTest {
      */
     @Test
     public void testHealthMapping2() throws Exception {
-        this.mockMvc.perform(get("/health")).andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString("HC Health Mapping")));
+        this.mockMvc.perform(get("/health")).andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString("UP")));
     }
 }
