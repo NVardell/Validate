@@ -1,5 +1,6 @@
 package com.digital.repo;
 
+import com.digital.model.CommandType;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -8,5 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Nate Vardell
  * @since 4/8/2018
  */
-public interface CommandTypeRepo extends JpaRepository<CommandTypeRepo, Long> {
+public interface CommandTypeRepo extends JpaRepository<CommandType, Long> {
 }
